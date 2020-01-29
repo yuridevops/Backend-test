@@ -2,14 +2,14 @@ const repository = require('../repositories/cliente-repository')
 
 
 exports.create = async (req, res, next) => {
-    try{
-        let data = await repository.create(req.body)
-        res.status(201).send(data)
-    }catch(e){
-        res.status(400).send({
-            message: 'Nome Cliente é obrigatório'
+    await repository.create(req.body)
+        .then(data => {
+            res.status(201).send(data)
+        }).catch(e => {
+            res.status(400).send({
+                message: 'Nome Cliente é obrigatório'
+            })
         })
-    }
        
 }
 
