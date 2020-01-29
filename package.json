@@ -1,0 +1,30 @@
+{
+  "name": "express-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "testCliente": "mocha 'src/test/cliente.test.js'",
+    "testProduto": "mocha 'src/test/produto.test.js'",
+    "testPedido": "mocha 'src/test/pedido.test.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "express": "^4.17.1",
+    "express-json-validator-middleware": "^2.0.0",
+    "http": "0.0.0",
+    "mocha": "^7.0.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.7.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
