@@ -1,9 +1,7 @@
 const Cliente = require('../models/Cliente');
-const mongoose = require('mongoose')
 
 exports.create = async (body) => {
-    const cliente = new Cliente(body) 
-    await cliente.save()
+    return await Cliente.create(body)
 }
 
 exports.showAll = async () =>{
